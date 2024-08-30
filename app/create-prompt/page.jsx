@@ -22,13 +22,13 @@ const CreatePrompt = () => {
         method: "POST",
         body: JSON.stringify({
           prompt: post.prompt,
-          userId: session?.user.id, //uniquely identifies each post acc to its userId
+          userId: session?.user.id,
           tag: post.tag,
         }),
       });
 
       if (response.ok) {
-        router.push("/"); //after submition pushes the user to the home directory
+        router.push("/");
       }
     } catch (error) {
       console.log(error);
